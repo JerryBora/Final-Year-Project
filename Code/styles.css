@@ -39,6 +39,7 @@ body {
     text-decoration: none;
     position: relative;
     transition: all 0.3s ease;
+    color: #1e2220;
 }
 
 .nav-links a:hover {
