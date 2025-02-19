@@ -23,7 +23,11 @@ body {
     align-items: center;
     padding: 1rem 5%;
     background: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .logo img {
@@ -33,6 +37,10 @@ body {
 .nav-links {
     display: flex;
     gap: 2rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-content: center;
 }
 
 .nav-links a {
@@ -259,8 +267,9 @@ body {
 /* Footer Styles */
 .footer {
     background: white;
-    padding: 4rem 5% 2rem;
-    margin-top: 4rem;
+    padding: 2rem;
+    margin-top: 0;
+    padding-top: 2rem;
 }
 
 .footer-content {
@@ -318,3 +327,447 @@ body {
         gap: 2rem;
     }
 } 
+
+/* About Page Styles */
+.about-container {
+    background-color: #00D67D;
+    min-height: 100vh;
+    padding: 2rem;
+    color: white;
+}
+
+.hero-section {
+    background-color: #ffffff;
+    padding: 4rem 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.steering-wheels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.wheel {
+    width: 150px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.center-content {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    padding: 0 2rem;
+}
+
+/* Style for the light wheels behind text */
+#light-wheel {
+    position: absolute;
+    width: 150px; /* Slightly larger for better visibility behind text */
+    height: 150px;
+    z-index: 1;
+}
+
+/* Position the left light wheel */
+#light-wheel:nth-of-type(3) {
+    left: 50%;
+    transform: translateX(-150%) translateY(-50%);
+    top: 50%;
+}
+
+/* Position the right light wheel */
+#light-wheel:nth-of-type(4) {
+    left: 50%;
+    transform: translateX(50%) translateY(-50%);
+    top: 50%;
+}
+
+.center-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #01BF63;
+    position: relative;
+    z-index: 3;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    color: #01BF63;
+    position: relative;
+    z-index: 3;
+}
+
+.about-description, .mission {
+    background-color: #01BF63;
+    padding: 5rem 2rem;
+    color: white;
+}
+
+.content-box {
+    background: #07DD76;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.content-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: white;
+}
+
+/* Remove space between sections while keeping box styling */
+.mission {
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
+
+.about-description {
+    padding-bottom: 1.5rem;
+}
+
+/* Adjust spacing between wheels */
+.steering-wheels img:not(:last-child) {
+    margin-right: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wheel {
+        width: 100px;
+        height: 100px;
+    }
+
+    .center-content h1 {
+        font-size: 2rem;
+    }
+
+    .about-description, .mission {
+        padding: 1.5rem;
+        margin: 2rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .wheel {
+        width: 70px;
+        height: 70px;
+    }
+
+    .center-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .tagline {
+        font-size: 1rem;
+    }
+}
+
+/* Contact Form Styles */
+.contact-section {
+    background-color: #01BF63;
+    padding: 4rem 2rem;
+    min-height: 60vh;
+}
+
+.contact-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 214, 125, 0.5);
+    padding: 3rem;
+    border-radius: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form .form-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-form label {
+    color: white;
+    font-weight: 600;
+    min-width: 180px;
+    text-align: right;
+}
+
+.contact-form input,
+.contact-form textarea {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background: white;
+    color: #01BF63;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    align-self: center;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: #01BF63;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-form .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .contact-form label {
+        text-align: left;
+    }
+
+    .contact-form-container {
+        padding: 2rem 1rem;
+    }
+}
+
+/* Login Page Styles */
+.login-section {
+    background-color: #01BF63;
+    padding: 4rem 2rem;
+    min-height: 60vh;
+}
+
+.login-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(0, 214, 125, 0.5);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.login-form-container h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.login-subtitle {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.login-form .form-group {
+    text-align: left;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.login-btn {
+    background: #01BF63;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background: #00a857;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signup-link {
+    color: white;
+    margin-top: 1rem;
+}
+
+.signup-link a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.signup-link a:hover {
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-form-container {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .login-form-container h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Sign Up Page Styles */
+.signup-section {
+    background-color: #01BF63;
+    padding: 4rem 2rem;
+    min-height: 60vh;
+}
+
+.signup-form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: rgba(0, 214, 125, 0.5);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.signup-form-container h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.signup-subtitle {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-label {
+    color: white;
+    text-align: left;
+    font-weight: 600;
+    margin-bottom: -0.5rem;
+}
+
+.name-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.name-group .form-group {
+    flex: 1;
+}
+
+.signup-form .form-group {
+    text-align: left;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+
+.signup-btn {
+    background: #01BF63;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.signup-btn:hover {
+    background: #00a857;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-link {
+    color: white;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.login-link p {
+    margin: 0.5rem 0;
+}
+
+.login-link a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .signup-form-container {
+        padding: 2rem 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .signup-form-container h2 {
+        font-size: 2rem;
+    }
+
+    .name-group {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
