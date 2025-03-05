@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Intelli Park</title>
+    <title>Login - Intelli Park</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
@@ -17,11 +17,11 @@
             <a href="index.html">Home</a>
             <a href="profile.html">Profile</a>
             <a href="about.html">About Us</a>
-            <a href="contact.html" class="active">Contact Us</a>
+            <a href="contact.html">Contact Us</a>
         </div>
         <div class="auth-buttons">
-            <button class="btn btn-login" onclick="window.location.href='login.html'">Login</button>
-            <button class="btn btn-register" onclick="window.location.href='register.html'">Register</button>
+            <button class="btn btn-login">Login</button>
+            <button class="btn btn-register">Register</button>
         </div>
     </nav>
 
@@ -41,31 +41,26 @@
         </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section class="contact-section">
-        <div class="contact-form-container">
-            <form class="contact-form">
+    <!-- Login Form Section -->
+    <section class="login-section">
+        <div class="login-form-container">
+            <h2>Log In to Intelli-Park</h2>
+            <p class="login-subtitle">Enter username and password</p>
+            
+            <form class="login-form">
                 <div class="form-group">
-                    <label for="name">Name :</label>
-                    <input type="text" id="name" placeholder="Name" required>
+                    <input type="email" id="email" placeholder="E-Mail" required>
                 </div>
 
                 <div class="form-group">
-                    <label for="contact">Contact Number :</label>
-                    <input type="tel" id="contact" placeholder="+91 91012-27640" required>
+                    <input type="password" id="password" placeholder="Password" required>
                 </div>
 
-                <div class="form-group">
-                    <label for="email">E-Mail:</label>
-                    <input type="email" id="email" placeholder="debangaraz2000@gmail.com" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="message">Your Message :</label>
-                    <textarea id="message" rows="4" required></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn">Submit</button>
+                <button type="submit" class="login-btn">Log in</button>
+                
+                <p class="signup-link">
+                    Don't have an account? <a href="register.html">Sign Up here</a>
+                </p>
             </form>
         </div>
     </section>
@@ -102,9 +97,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Copyright © 2025 Intelli Park</p>
+            <p>Copyright 2025 Intelli Park</p>
             <p>All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script src="main.js"></script>
 </body>
-</html> 
+</html>
