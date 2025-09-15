@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliPark - Smart Parking Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/Logo-Short 1.png" alt="IntelliPark Logo">
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="auth-buttons">
+            <button class="btn btn-login" onclick="window.location.href='login.html'">Login</button>
+            <button class="btn btn-register" onclick="window.location.href='register.html'">Register</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                <span class="text-primary">Intelli-Park</span><br>
+                <span style="color: #01bf63">Smart Parking Solutions</span>
+                <br>
+                <span class="text-secondary">For Modern Cities</span>
+            </h1>
+            <p>Transform your parking experience with real-time occupancy monitoring, automated payments, and digital permits. Making parking smarter, simpler, and more efficient.</p>
+        </div>
+        <div class="hero-image">
+            <img src="assets/Car Background 1.png" alt="Smart Parking">
+        </div>
+    </section>
+
+
+
+    <!-- Booking Form -->
+    <section class="booking-section">
+        <div class="booking-container">
+            <h2 style="color: white; text-align: center;">Book Now</h2>
+            <div class="booking-form">
+                <div class="form-group">
+                    <label style="color: white; font-weight: 600;">SELECT LOCATION</label>
+                    <div class="location-selectors">
+                        <div class="select-wrapper">
+                            <select class="location-select">
+
+                                <option value="" disabled selected>City</option>
+                                <option value="guwahati">Guwahati</option>
+                                <option value="jorhat">Jorhat</option>
+                                <option value="dibrugarh">Dibrugarh</option>
+                            </select>
+                        </div>
+                        <div class="select-wrapper">
+                            <select class="location-select">
+                                <option value="" disabled selected>Area</option>
+                                <option value="downtown">Down-Town Area</option>
+                                <option value="ganeshguri">Ganeshguri</option>
+                                <option value="sixmile">Six Mile</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label style="color: white; font-weight: 600;">CHECK IN</label>
+                    <div class="datetime-input">
+                        <input type="date" class="date-picker">
+                        <select class="time-picker">
+                            <option>09:45 AM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label style="color: white; font-weight: 600;">CHECK OUT</label>
+
+                    <div class="datetime-input">
+                        <input type="date" class="date-picker">
+                        <select class="time-picker">
+                            <option>09:45 AM</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-search" onclick="searchParking()">SEARCH</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <img src="assets/Logo-Long  1.png" alt="IntelliPark Logo">
+                <p>Smart Parking Solutions for Modern Cities</p>
+                <div class="social-links">
+
+
+
+                    <!-- Add social media icons -->
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Organization</h3>
+                <br>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Home</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Get In Touch</h3>
+                <br>
+                <p>+91 91012-27640</p>
+                <p>+91 876105-5433</p>
+                <br>
+                <p>NH-37, Dept. Of CSE,<br>
+                   Kaziranga University, Jorhat<br>
+                   Assam 8875006</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright 2025 Intelli Park</p>
+            <p>All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
